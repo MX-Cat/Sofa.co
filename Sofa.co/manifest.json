@@ -1,0 +1,39 @@
+{
+  "name": "Sofa.co",
+  "version": "1.0",
+  "description": "Теберь вы всегда сможете узнать сколько диванов осталось до!",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Sofa.co",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    }
+  },
+  "icons": {
+    "16": "images/get_started16.png",
+    "32": "images/get_started32.png",
+    "48": "images/get_started48.png",
+    "128": "images/get_started128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false,
+    "open-in-tab": true
+  },
+  "chrome_url_overrides": {
+    "newtab": "myPage.html"
+  },
+  "manifest_version": 2
+}
