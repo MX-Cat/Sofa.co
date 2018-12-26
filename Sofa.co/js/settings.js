@@ -17,8 +17,8 @@ $('#btnCloseSettings').click(function() {
 
 // закрыть по клику вне окна
 $(document).mouseup(function (e) { 
-	var popup = $('#formSettings');
-	if (e.target!=popup[0]){
+	var popup = $('#formSettingsWrapper');
+	if (e.target==popup[0]){
 		$('#formSettingsWrapper').fadeOut();
 		
 	}
