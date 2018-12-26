@@ -1,0 +1,73 @@
+body {margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; }
+
+#btnSettings {
+	position: fixed;
+	top: 10px;
+	left: 7px;
+	border-radius: 3px;
+	background-color: transparent;
+	text-align: center;
+	cursor: pointer;
+} 
+
+#formSettingsWrapper {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+    background-color: rgba(0, 0, 0, .4);
+	display: none;
+}
+
+#formSettings {
+	position: absolute;
+	width: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 40px;
+	box-sizing: border-box;
+	background-color: #FA7268;
+	color: #fff;
+}
+
+#btnCloseSettings {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 23px;
+	height: 23px;
+	cursor: pointer;
+}
+
+#btnCloseSettings:before {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+	transform: rotate(-45deg);
+}
+
+#btnCloseSettings:after {
+	content: '';
+	background-color: #fff;
+	position: absolute;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+
+@media screen and (max-width: 400px) {
+
+	#formSettings {
+		width: 90%;
+		height: 95%;
+		font-size: 15px;
+	}
+}

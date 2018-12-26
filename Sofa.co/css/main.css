@@ -24,7 +24,7 @@ footer {
 }
 
 .sofaCard {
-    margin-top: 37vh;
+    margin-top: 40vh;
 }
 
 .hasRightMargin {
@@ -46,3 +46,14 @@ footer {
  .bgUltraViolet {
      background-color: #5F4B8B;
  }
+
+ #btnSettings {
+     position: fixed;
+     margin: 10px;
+     background-color: transparent;
+     border-color: transparent;
+ }
+
+ #btnSettings svg {
+    fill: #FA7268;
+}

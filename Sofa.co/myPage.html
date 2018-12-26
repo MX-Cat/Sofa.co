@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Local styles -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -21,6 +22,24 @@
         <div id="YearProgress" class="sofasProgressBar" style="width: 0px;"></div>
     </div>
 
+    <button id="btnSettings" class="button js-button-campaign"><img src="ico/Settings.svg" width="24px" height="24px"></button>
+    <div id="formSettingsWrapper">
+        <div id="formSettings">
+            <h1 class="h1">
+                <span>Settings</span>
+            </h1>
+            <hr style="background-color:rgb(175, 175, 175); height: 0.7px;" />
+            <div class="container">
+                <label>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi labore natus magni, atque
+                        unde dolorum minus iusto eum laborum nihil repudiandae sunt inventore numquam est, delectus
+                        illum obcaecati quibusdam. At?</p>
+                </label>
+            </div>
+            <div id="btnCloseSettings"></div>
+        </div>
+    </div>
+
     <div class="sofaCard">
         <div class="d-flex justify-content-center">
             <h2 class="hasRightMargin cLivingCoral">Year progress:</h2>
@@ -30,24 +49,19 @@
             <h3 id="DaysToNextYear" class="hasRightMargin cLivingCoral"></h3>
             <h3 class="cLivingCoral">sofas left</h3>
         </div>
-        <div class="d-flex justify-content-center">
-
-        </div>
     </div>
-
-    <footer>
-        <div id="SPbarTxt" class="sofasProgressBarTxt cLivingCoral"></div>
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
     <script src="js/background.js"></script>
+    <script src="js/settings.js"></script>
 </body>
 
 </html>
