@@ -31,14 +31,24 @@
             <hr style="background-color:rgb(255, 255, 255); height: 0.7px;" />
             <div class="container">
                 <label>
-                    <p>Фон (Стандарт/диван/цвет/пейзаж/кастом)</p>
-                    <p>Режим (Статистика/таймер)</p>
-                    <p>Данные (Год/месяц/неделя/день)</p>
-                    <p>Отсчёт (От начала/до конца)</p>
-                    <p>Единицы измерения (Стандартные/Диваны)</p>
+                    <p>Background (Default/Sofa/Color/Picture/Custom)</p>
+                    <p>Mode (Statistics/Timer)</p>
+                    <p>Analyzing data (Year/month/week/day)</p>
+                    <p>Count (Up/down)</p>
+                    <p>Units (Standart/Sofas)</p>
                 </label>
+                <button id="btnSaveSettings" class="btn btn-light">Save</button>
+                <div class="input-group-prepend">
+                    <button id="languageSelector" class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Language</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">Русский</a>
+                    </div>
+                </div>
             </div>
             <div id="btnCloseSettings"></div>
+
         </div>
     </div>
 
@@ -55,12 +65,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="js/third-party/jquery.min.js"></script>
+    <script src="js/third-party/popper.min.js"></script>
+    <script src="js/third-party/bootstrap.min.js"></script>
 
     <script src="js/background.js"></script>
     <script src="js/settings.js"></script>

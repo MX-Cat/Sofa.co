@@ -11,15 +11,15 @@ $('#btnSettings').click(function() {
 
 // закрыть на крестик
 $('#btnCloseSettings').click(function() { 
+
 	$('#formSettingsWrapper').fadeOut();
-	
 });
 
 // закрыть по клику вне окна
 $(document).mouseup(function (e) { 
-	var popup = $('#formSettingsWrapper');
-	if (e.target==popup[0]){
+    if (e.target == $('#formSettingsWrapper')||
+        e.target == $('#btnSaveSettings')) {
+
 		$('#formSettingsWrapper').fadeOut();
-		
 	}
 });

@@ -32,6 +32,10 @@ body {margin: 0; padding: 0; font-family: Helvetica, Arial, sans-serif; }
 	color: #fff;
 }
 
+#btnSaveSettings {
+    float: right;
+}
+
 #btnCloseSettings {
 	position: absolute;
 	top: 15px;
