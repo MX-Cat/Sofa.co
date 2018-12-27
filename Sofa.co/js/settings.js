@@ -39,6 +39,21 @@ $(document).mouseup(function (e) {
 	}
 });
 
+// Add slideDown animation to Bootstrap dropdown when expanding.
+$('.input-group-prepend').on('show.bs.dropdown', function () {
+	$(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+});
+
+// Add slideUp animation to Bootstrap dropdown when collapsing.
+$('.input-group-prepend').on('hide.bs.dropdown', function () {
+	$(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+});
+
+// Prevent dropdown from closing on click
+$('.dropdown-menu').click(function (e) {
+	e.stopPropagation();
+});
+
 $('#btnSaveSettings').click(function () {
 	console.log("Ну тут тип сохранение настроек");
 	console.log(CurrentSettings);
@@ -50,6 +65,14 @@ function SetEventHandlers(Options) {
 			var data = TrimByCamelcase(e.target.id);
 			console.log(data);
 			CurrentSettings[data[1] + data[2]] = data[0];
+
+			var item = document.getElementById(e.target.id);
+			var parentItem = document.getElementById(data[1] + data[2] + "DropDown");
+			for (var child of parentItem.children) {
+				child.classList.remove("active");
+			}
+			item.classList.add("active");
+
 		});
 	}
 };

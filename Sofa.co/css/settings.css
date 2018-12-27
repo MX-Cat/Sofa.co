@@ -6,6 +6,7 @@
 	background-color: transparent;
 	text-align: center;
 	cursor: pointer;
+	z-index: 2;
 } 
 
 #formSettingsWrapper {
@@ -96,4 +97,9 @@ button.btn.btn-outline-light.dropdown-toggle.optionSelector {
     text-align: left;
     min-width: 200px;
     margin-bottom: 3px;
+}
+
+.dropdown-item :hover, .dropdown-item :focus, .dropdown-item:active {
+	background-color: #fafafa !important;
+	color: #000 !important;
 }

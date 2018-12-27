@@ -22,7 +22,7 @@
         <div id="YearProgress" class="sofasProgressBar" style="width: 0px;"></div>
     </div>
 
-    <button id="btnSettings" class="button js-button-campaign"><img src="ico/Settings.svg" width="24px" height="24px"></button>
+    <button id="btnSettings" class="button js-button-campaign"><img id="iconSettings" src="ico/Settings.svg" width="18px" height="18px"></button>
     <div id="formSettingsWrapper">
         <div id="formSettings">
             <h1 id="formSettingsHeader">
@@ -34,7 +34,7 @@
                 <div id="backgroundSelectorWrapper" class="input-group-prepend">
                     <button id="backgroundSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Background</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="BgOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="defaultBgOption" class="dropdown-item bgOption" href="#">Default</a>
                         <a id="sofaBgOption" class="dropdown-item bgOption" href="#">Sofa</a>
                         <a id="colorBgOption" class="dropdown-item bgOption" href="#">Color</a>
@@ -46,7 +46,7 @@
                 <div id="modeSelectorWrapper" class="input-group-prepend">
                     <button id="modeSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mode</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="ModeOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="statsModeOption" class="dropdown-item modeOption" href="#">Statistics</a>
                         <a id="timerModeOption" class="dropdown-item modeOption" href="#">Timer</a>
                     </div>
@@ -55,7 +55,7 @@
                 <div id="analyzerSelectorWrapper" class="input-group-prepend">
                     <button id="analyzerSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analyzing data</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="AnalOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="yearAnalOption" class="dropdown-item analOption" href="#">Year</a>
                         <a id="monthAnalOption" class="dropdown-item analOption" href="#">Month</a>
                         <a id="weekAnalOption" class="dropdown-item analOption" href="#">Week</a>
@@ -66,7 +66,7 @@
                 <div id="countSelectorWrapper" class="input-group-prepend">
                     <button id="countSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Count</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="CountOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="upCountOption" class="dropdown-item countOption" href="#">Up</a>
                         <a id="downCountOption" class="dropdown-item countOption" href="#">Down</a>
                     </div>
@@ -75,18 +75,18 @@
                 <div id="unitsSelectorWrapper" class="input-group-prepend">
                     <button id="unitsSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Units</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="UnitsOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="defaultUnitsOption" class="dropdown-item unitsOption" href="#">Default</a>
                         <a id="sofasUnitsOption" class="dropdown-item unitsOption" href="#">Sofas</a>
                     </div>
                 </div>
 
-                <button id="btnSaveSettings" class="btn btn-light">Save</button>
+                <button id="btnSaveSettings" class="btn btn-light">Apply</button>
 
                 <div id="languageSelectorWrapper" class="input-group-prepend">
                     <button id="languageSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
-                    <div class="dropdown-menu optionsDropDown">
+                    <div id="LangOptionDropDown" class="dropdown-menu optionsDropDown">
                         <a id="englishLangOption" class="dropdown-item langOption" href="#">English</a>
                         <a id="russianLangOption" class="dropdown-item langOption" href="#">Русский</a>
                     </div>
