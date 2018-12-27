@@ -1,7 +1,15 @@
 'use strict';
 
 // Модальное окно
-var isInitialized = false; 
+var isInitialized = false;
+var CurrentSettings = {
+	"BgOption": "",
+	"ModeOption": "",
+	"AnalOption": "",
+	"CountOption": "",
+	"UnitsOption": "",
+	"LangOption": ""
+};
 
 // открыть по кнопке
 $('#btnSettings').click(function () {
@@ -9,6 +17,7 @@ $('#btnSettings').click(function () {
 	$('#formSettingsWrapper').fadeIn();
 	$('#formSettingsWrapper').addClass('disabled');
 	if (!isInitialized) {
+		isInitialized = true;
 		var optionsDropDown = document.getElementsByClassName("optionsDropDown");
 		for (var optionList of optionsDropDown) {
 			SetEventHandlers(optionList.children);
@@ -32,15 +41,32 @@ $(document).mouseup(function (e) {
 
 $('#btnSaveSettings').click(function () {
 	console.log("Ну тут тип сохранение настроек");
+	console.log(CurrentSettings);
 });
 
 function SetEventHandlers(Options) {
 	for (var option of Options) {
 		option.addEventListener('click', function (e) {
-			console.log(e.target.id);
+			var data = TrimByCamelcase(e.target.id);
+			console.log(data);
+			CurrentSettings[data[1] + data[2]] = data[0];
 		});
 	}
 };
+
+function TrimByCamelcase(str) {
+	var result = [];
+	var temp = "";
+	for (var chNum in str) {
+		if (str[chNum] == str[chNum].toUpperCase() && chNum != 0) {
+			result.push(temp);
+			temp = "";
+		}
+		temp += str[chNum];
+	}
+	result.push(temp);
+	return result;
+}
 
 // function save_options() {
 //     var color = document.getElementById('color').value;
