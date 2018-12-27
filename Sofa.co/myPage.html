@@ -25,30 +25,75 @@
     <button id="btnSettings" class="button js-button-campaign"><img src="ico/Settings.svg" width="24px" height="24px"></button>
     <div id="formSettingsWrapper">
         <div id="formSettings">
-            <h1 class="h1">
+            <h1 id="formSettingsHeader">
                 Settings
             </h1>
             <hr style="background-color:rgb(255, 255, 255); height: 0.7px;" />
             <div class="container">
-                <label>
-                    <p>Background (Default/Sofa/Color/Picture/Custom)</p>
-                    <p>Mode (Statistics/Timer)</p>
-                    <p>Analyzing data (Year/month/week/day)</p>
-                    <p>Count (Up/down)</p>
-                    <p>Units (Standart/Sofas)</p>
-                </label>
-                <button id="btnSaveSettings" class="btn btn-light">Save</button>
-                <div class="input-group-prepend">
-                    <button id="languageSelector" class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Language</button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">English</a>
-                        <a class="dropdown-item" href="#">Русский</a>
+
+                <div id="backgroundSelectorWrapper" class="input-group-prepend">
+                    <button id="backgroundSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Background</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="defaultBgOption" class="dropdown-item bgOption" href="#">Default</a>
+                        <a id="sofaBgOption" class="dropdown-item bgOption" href="#">Sofa</a>
+                        <a id="colorBgOption" class="dropdown-item bgOption" href="#">Color</a>
+                        <a id="pictureBgOption" class="dropdown-item bgOption" href="#">Picture</a>
+                        <a id="customBgOption" class="dropdown-item bgOption" href="#">Custom</a>
                     </div>
                 </div>
+
+                <div id="modeSelectorWrapper" class="input-group-prepend">
+                    <button id="modeSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mode</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="statsModeOption" class="dropdown-item modeOption" href="#">Statistics</a>
+                        <a id="timerModeLangOption" class="dropdown-item modeOption" href="#">Timer</a>
+                    </div>
+                </div>
+
+                <div id="analyzerSelectorWrapper" class="input-group-prepend">
+                    <button id="analyzerSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analyzing data</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="yearAnalOption" class="dropdown-item analOption" href="#">Year</a>
+                        <a id="monthAnalOption" class="dropdown-item analOption" href="#">Month</a>
+                        <a id="weekAnalOption" class="dropdown-item analOption" href="#">Week</a>
+                        <a id="dayAnalOption" class="dropdown-item analOption" href="#">Day</a>
+                    </div>
+                </div>
+
+                <div id="countSelectorWrapper" class="input-group-prepend">
+                    <button id="countSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Count</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="upCountOption" class="dropdown-item countOption" href="#">Up</a>
+                        <a id="downCountOption" class="dropdown-item countOption" href="#">Down</a>
+                    </div>
+                </div>
+
+                <div id="unitsSelectorWrapper" class="input-group-prepend">
+                    <button id="unitsSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Units</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="defaultUnitsOption" class="dropdown-item unitsOption" href="#">Default</a>
+                        <a id="sofasUnitsOption" class="dropdown-item unitsOption" href="#">Sofas</a>
+                    </div>
+                </div>
+
+                <button id="btnSaveSettings" class="btn btn-light">Save</button>
+
+                <div id="languageSelectorWrapper" class="input-group-prepend">
+                    <button id="languageSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
+                    <div class="dropdown-menu optionsDropDown">
+                        <a id="englishLangOption" class="dropdown-item langOption" href="#">English</a>
+                        <a id="russianLangOption" class="dropdown-item langOption" href="#">Русский</a>
+                    </div>
+                </div>
+
             </div>
             <div id="btnCloseSettings"></div>
-
         </div>
     </div>
 
