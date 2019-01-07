@@ -33,32 +33,55 @@ footer {
     margin-right: 7px;
 }
 
- .cLivingCoral {
+.cLivingCoral {
     color:#FA7268;
- }
+}
 
- .cUltraViolet {
+.cUltraViolet {
     color: #5F4B8B;
- }
+}
 
- .bgcLivingCoral {
+.bgcLivingCoral {
     background-color: #FA7268;
- }
+}
 
- .bgUltraViolet {
-     background-color: #5F4B8B;
- }
+.bgUltraViolet {
+    background-color: #5F4B8B;
+}
 
- #btnSettings {
-     position: fixed;
-     width: 20px;
-     height: 20px;
-     margin: 3px;
-     background-color: transparent;
-     border-color: transparent;
-     outline: none;
- }
+.mainMenuButtons {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    margin-top: 10px;
+    display: block;
+}
 
- #btnSettings svg {
-    fill: #FA7268;
+#btnMainMenu {
+    position: fixed;
+    background: transparent !important;
+    border: transparent !important;
+    outline: none !important;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    left: 10px;
+    padding-left: 20px;
+    color: #fa7268;
+}
+
+#MainMenuContentWrapper {
+    max-width: 50px !important;
+    height: 85vh;
+    background-color: #ffffff20;
+    border-radius: 5px;
+}
+
+.ddmMainMenu {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    max-width: 50px !important;
 }

@@ -3,7 +3,8 @@
   "version": "1.0",
   "description": "Теберь вы всегда сможете узнать сколько диванов осталось до!",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "background": {
     "scripts": [

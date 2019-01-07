@@ -1,12 +1,17 @@
-#btnSettings {
-	position: fixed;
-	top: 10px;
+.button.mainMenuButtons {
+	padding: 0;
+	width: 36px;
+	height: 36px;
+	position: relative;
 	left: 7px;
+}
+
+#btnSettings {
 	border-radius: 3px;
 	background-color: transparent;
 	text-align: center;
 	cursor: pointer;
-	z-index: 2;
+	top: 10px;
 } 
 
 #formSettingsWrapper {
@@ -16,7 +21,8 @@
 	top: 0;
 	left: 0;
     background-color: rgba(0, 0, 0, .4);
-    display: none;
+	display: none;
+	z-index: 10;
 }
 
 #formSettings {
@@ -99,7 +105,11 @@ button.btn.btn-outline-light.dropdown-toggle.optionSelector {
     margin-bottom: 3px;
 }
 
-.dropdown-item :hover, .dropdown-item :focus, .dropdown-item:active {
+.dropdown-item.settings-ddi {
+	min-width: 167px;
+}
+
+.dropdown-item.settings-ddi :hover, .dropdown-item.settings-ddi :focus, .dropdown-item.settings-ddi :active {
 	background-color: #fafafa !important;
 	color: #000 !important;
 }

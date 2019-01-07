@@ -22,7 +22,19 @@
         <div id="YearProgress" class="sofasProgressBar" style="width: 0px;"></div>
     </div>
 
-    <button id="btnSettings" class="button js-button-campaign"><img id="iconSettings" src="ico/Settings.svg" width="18px" height="18px"></button>
+    <div class="input-group-prepend">
+        <button id="btnMainMenu" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false"></button>
+        <div class="dropdown-menu ddmMainMenu">
+            <div id="MainMenuContentWrapper">
+                <button id="btnSettings" class="button mainMenuButtons"><img id="iconSettings" src="ico/Settings.svg" width="18px"
+                        height="18px"></button>
+                <button id="btnInfo" class="button mainMenuButtons"><img id="iconInfo" src="ico/Info.svg" width="18px"
+                        height="18px"></button>
+            </div>
+        </div>
+    </div>
+
     <div id="formSettingsWrapper">
         <div id="formSettings">
             <h1 id="formSettingsHeader">
@@ -35,11 +47,11 @@
                     <button id="backgroundSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Background</button>
                     <div id="BgOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="defaultBgOption" class="dropdown-item bgOption" href="#">Default</a>
-                        <a id="sofaBgOption" class="dropdown-item bgOption" href="#">Sofa</a>
-                        <a id="colorBgOption" class="dropdown-item bgOption" href="#">Color</a>
-                        <a id="pictureBgOption" class="dropdown-item bgOption" href="#">Picture</a>
-                        <a id="customBgOption" class="dropdown-item bgOption" href="#">Custom</a>
+                        <a id="defaultBgOption" class="dropdown-item bgOption settings-ddi" href="#">Default</a>
+                        <a id="sofaBgOption" class="dropdown-item bgOption settings-ddi" href="#">Sofa</a>
+                        <a id="colorBgOption" class="dropdown-item bgOption settings-ddi" href="#">Color</a>
+                        <a id="pictureBgOption" class="dropdown-item bgOption settings-ddi" href="#">Picture</a>
+                        <a id="customBgOption" class="dropdown-item bgOption settings-ddi" href="#">Custom</a>
                     </div>
                 </div>
 
@@ -47,8 +59,8 @@
                     <button id="modeSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mode</button>
                     <div id="ModeOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="statsModeOption" class="dropdown-item modeOption" href="#">Statistics</a>
-                        <a id="timerModeOption" class="dropdown-item modeOption" href="#">Timer</a>
+                        <a id="statsModeOption" class="dropdown-item modeOption settings-ddi" href="#">Statistics</a>
+                        <a id="timerModeOption" class="dropdown-item modeOption settings-ddi" href="#">Timer</a>
                     </div>
                 </div>
 
@@ -56,10 +68,10 @@
                     <button id="analyzerSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Analyzing data</button>
                     <div id="AnalOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="yearAnalOption" class="dropdown-item analOption" href="#">Year</a>
-                        <a id="monthAnalOption" class="dropdown-item analOption" href="#">Month</a>
-                        <a id="weekAnalOption" class="dropdown-item analOption" href="#">Week</a>
-                        <a id="dayAnalOption" class="dropdown-item analOption" href="#">Day</a>
+                        <a id="yearAnalOption" class="dropdown-item analOption settings-ddi" href="#">Year</a>
+                        <a id="monthAnalOption" class="dropdown-item analOption settings-ddi" href="#">Month</a>
+                        <a id="weekAnalOption" class="dropdown-item analOption settings-ddi" href="#">Week</a>
+                        <a id="dayAnalOption" class="dropdown-item analOption settings-ddi" href="#">Day</a>
                     </div>
                 </div>
 
@@ -67,8 +79,8 @@
                     <button id="countSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Count</button>
                     <div id="CountOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="upCountOption" class="dropdown-item countOption" href="#">Up</a>
-                        <a id="downCountOption" class="dropdown-item countOption" href="#">Down</a>
+                        <a id="upCountOption" class="dropdown-item countOption settings-ddi" href="#">Up</a>
+                        <a id="downCountOption" class="dropdown-item countOption settings-ddi" href="#">Down</a>
                     </div>
                 </div>
 
@@ -76,8 +88,8 @@
                     <button id="unitsSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Units</button>
                     <div id="UnitsOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="defaultUnitsOption" class="dropdown-item unitsOption" href="#">Default</a>
-                        <a id="sofasUnitsOption" class="dropdown-item unitsOption" href="#">Sofas</a>
+                        <a id="defaultUnitsOption" class="dropdown-item unitsOption settings-ddi" href="#">Default</a>
+                        <a id="sofasUnitsOption" class="dropdown-item unitsOption settings-ddi" href="#">Sofas</a>
                     </div>
                 </div>
 
@@ -87,8 +99,8 @@
                     <button id="languageSelector" class="btn btn-outline-light dropdown-toggle optionSelector" type="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
                     <div id="LangOptionDropDown" class="dropdown-menu optionsDropDown">
-                        <a id="englishLangOption" class="dropdown-item langOption" href="#">English</a>
-                        <a id="russianLangOption" class="dropdown-item langOption" href="#">Русский</a>
+                        <a id="englishLangOption" class="dropdown-item langOption settings-ddi" href="#">English</a>
+                        <a id="russianLangOption" class="dropdown-item langOption settings-ddi" href="#">Русский</a>
                     </div>
                 </div>
 
@@ -114,6 +126,7 @@
     <script src="js/third-party/popper.min.js"></script>
     <script src="js/third-party/bootstrap.min.js"></script>
 
+    <script src="js/DateTimeAnalyzer.js"></script>
     <script src="js/background.js"></script>
     <script src="js/settings.js"></script>
 </body>
