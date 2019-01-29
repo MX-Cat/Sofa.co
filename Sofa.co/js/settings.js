@@ -1,7 +1,7 @@
 'use strict';
 
 
-// Модальное окно
+// Modal window
 var isInitialized = false;
 var DefaultAccentColor = "#FA7268";
 var DefaultBgColor = "#5F4B8B";
@@ -14,7 +14,7 @@ var CurrentSettings = {
 	"LangOption": ""
 };
 
-// открыть по кнопке
+// Open on click
 $('#btnSettings').click(function () {
 
 	$('#formSettingsWrapper').fadeIn();
@@ -28,13 +28,13 @@ $('#btnSettings').click(function () {
 	}
 });
 
-// закрыть на крестик
+// Close on cross
 $('#btnCloseSettings').click(function () {
 
 	$('#formSettingsWrapper').fadeOut();
 });
 
-// закрыть по клику вне окна
+// Close on click out of the modal window
 $(document).mouseup(function (e) {
 	if (e.target.id == 'formSettingsWrapper') {
 
@@ -57,9 +57,8 @@ $('.dropdown-menu').click(function (e) {
 	e.stopPropagation();
 });
 
+// Save settings on btnSaveSettings click
 $('#btnSaveSettings').click(function () {
-	console.log("Ну тут тип сохранение настроек");
-	console.log(CurrentSettings);
 	save_options();
 });
 
@@ -90,6 +89,7 @@ function SetCurrentOptionState(Option) {
 	}
 }
 
+// Get the array of words from a camelcased statement
 function TrimByCamelcase(str) {
 	var result = [];
 	var temp = "";
