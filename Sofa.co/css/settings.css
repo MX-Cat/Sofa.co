@@ -23,6 +23,7 @@
     background-color: rgba(0, 0, 0, .4);
 	display: none;
 	z-index: 10;
+	margin: 0;
 }
 
 #formSettings {

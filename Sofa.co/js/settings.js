@@ -1,5 +1,7 @@
 'use strict';
 
+var sofaURLs = ["url('https://www.8marta.ru/files/nodus_items/0000/0265/_cache/images/watermark94610169/pal-1443628899.jpg')",
+				"url('https://www.8marta.ru/files/nodus_items/0000/0291/_cache/images/watermark94610169/pal-1443630133.jpg'"]
 
 // Модальное окно
 var isInitialized = false;
@@ -84,8 +86,13 @@ function SetEventHandlers(Options) {
 
 function SetCurrentOptionState(Option) {
 	var parsedOption = TrimByCamelcase(Option.id);
-	if (CurrentSettings[parsedOption[1] + parsedOption[2]] == parsedOption[0])
+	var settingsItem = parsedOption[1] + parsedOption[2]
+	if (CurrentSettings[settingsItem] == parsedOption[0])
 	{
+		if (settingsItem == "BgOption" && parsedOption[0] == "sofa") {
+			console.log("Choose sofa");
+			document.body.style.backgroundImage = sofaURLs[0];
+		}
 		Option.classList.add("active");
 	}
 }
@@ -134,6 +141,8 @@ function restore_options() {
 		CurrentSettings = items.settingsList;
 		console.log(items.settingsList)
 	});
+
+
 }
 
 
