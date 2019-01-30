@@ -16,8 +16,6 @@ function ShowOptions() {
     }
 }
 
-
-
 window.onload = function () {
     document.querySelector('#go-to-options').addEventListener('click', ShowOptions);
 }

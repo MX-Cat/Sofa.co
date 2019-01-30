@@ -62,6 +62,7 @@ $('.dropdown-menu').click(function (e) {
 // Save settings on btnSaveSettings click
 $('#btnSaveSettings').click(function () {
 	save_options();
+	$('#formSettingsWrapper').fadeOut();
 });
 
 function SetEventHandlers(Options) {
