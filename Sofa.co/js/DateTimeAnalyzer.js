@@ -1,19 +1,19 @@
 'use strict';
 
 window.onload = function () {
-	var now = new Date();
-	
-	document.getElementById('YearPercentage').innerHTML = Math.round(MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear()))) + "%";
-	document.getElementById('DaysToNextYear').innerHTML = Math.ceil(MsConverter.ToDays(GetMsToNextYear(now.getFullYear())));
-	document.getElementById('YearProgress').style.width = MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear())) + "%"
+	updateScreenData()
+}
 
-	window.setInterval(
-		function () {
-			document.getElementById('YearPercentage').innerHTML = Math.round(MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear()))) + "%";
-			document.getElementById('DaysToNextYear').innerHTML = Math.ceil(MsConverter.ToDays(GetMsToNextYear()));
-			document.getElementById('YearProgress').style.width = MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear())) + "%"
-		}
-		, GetMsToTomorrow());
+function updateScreenData() {
+	var now = new Date();
+	var temp = "Year"
+	switch (temp) {
+	case "Year":
+		document.getElementById('Percentage').innerHTML = Math.round(MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear()))) + "%";
+		document.getElementById('Counter').innerHTML = Math.ceil(MsConverter.ToDays(GetMsToNextYear()));
+		document.getElementById('Progress').style.width = MsConverter.ToYearPercentage(GetYearMS(), isLeap(now.getFullYear())) + "%"
+	}
+	window.setTimeout(updateScreenData(), GetMsToTomorrow());
 }
 
 function GetDayMS() {

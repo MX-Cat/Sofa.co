@@ -83,5 +83,7 @@ footer {
 .ddmMainMenu {
     background-color: transparent !important;
     border-color: transparent !important;
-    max-width: 50px !important;
+    min-width: 52px !important;
+    margin: 0px !important;
+    z-index: 0 !important;
 }
